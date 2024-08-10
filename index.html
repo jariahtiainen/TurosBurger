@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Turo's Burger</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+<style>
+body, html {height: 100%}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
+.menu {display: none}
+.bgimg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(kuva.jpeg);
+  min-height: 90%;
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top w3-hide-small">
+  <div class="w3-bar w3-xlarge w3-black w3-opacity w3-hover-opacity-off" id="myNavbar">
+    <a href="#" class="w3-bar-item w3-button">KOTI</a>
+    <a href="#menu" class="w3-bar-item w3-button">MENU</a>
+    <a href="#about" class="w3-bar-item w3-button">TIEDOT</a>
+    <a href="#myMap" class="w3-bar-item w3-button">YHTEYDENOTOT</a>
+  </div>
+</div>
+  
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-bottomleft w3-padding">
+    <span class="w3-tag w3-xlarge">Avoinna klo 10-22</span>
+  </div>
+  <div class="w3-display-middle w3-center">
+    <span class="w3-text-white w3-hide-small" style="font-size:100px">TURO'S<br>BURGER</span>
+    <span class="w3-text-white w3-hide-large w3-hide-medium" style="font-size:60px"><b>herkulliset<br>BURGERIT</b></span>
+    <p><a href="#menu" class="w3-button w3-xxlarge w3-black">Näytä menu</a></p>
+  </div>
+</header>
+
+<!-- Menu Container -->
+<div class="w3-container w3-black w3-padding-64 w3-xxlarge" id="menu">
+  <div class="w3-content">
+  
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">MENU</h1>
+    <div class="w3-row w3-center w3-border w3-border-dark-grey">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Burgers');" id="myLink">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Burgerit</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Sides');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Sivut</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Desserts');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Jälkiruoat</div>
+      </a>
+    </div>
+
+    <div id="Burgers" class="w3-container menu w3-padding-32 w3-white">
+      <h1><b>Classic Cheeseburger</b> <span class="w3-right w3-tag w3-dark-grey w3-round">€12.50</span></h1>
+      <p class="w3-text-grey">Mehevä naudanlihapihvi, cheddarjuusto, salaatti, tomaatti, majoneesi</p>
+      <hr>
+   
+      <h1><b>Bacon BBQ Burger</b> <span class="w3-right w3-tag w3-dark-grey w3-round">€14.00</span></h1>
+      <p class="w3-text-grey">Naudanlihapihvi, pekoni, BBQ-kastike, cheddarjuusto, karamellisoitu sipuli</p>
+      <hr>
+      
+      <h1><b>Veggie Delight</b> <span class="w3-right w3-tag w3-dark-grey w3-round">€13.00</span></h1>
+      <p class="w3-text-grey">Kasvispihvi, avokado, tomaatti, salaatti, mausteinen majoneesi</p>
+      <hr>
+
+      <h1><b>Spicy Chicken Burger</b> <span class="w3-tag w3-red w3-round">Tulinen!</span><span class="w3-right w3-tag w3-dark-grey w3-round">€15.00</span></h1>
+      <p class="w3-text-grey">Hellävaraisesti maustettu kanapihvi, chili, jalapeno, coleslaw</p>
+      <hr>
+
+      <h1><b>Double Deluxe</b> <span class="w3-tag w3-grey w3-round">Uusi</span><span class="w3-right w3-tag w3-dark-grey w3-round">€17.50</span></h1>
+      <p class="w3-text-grey">Kaksi naudanlihapihviä, tupla cheddarjuusto, pekoni, avokado, salaatti, tomaatti, majoneesi</p>
+    </div>
+
+    <div id="Sides" class="w3-container menu w3-padding-32 w3-white">
+      <h1><b>Fries</b> <span class="w3-tag w3-grey w3-round">Suosittu</span> <span class="w3-right w3-tag w3-dark-grey w3-round">€5.50</span></h1>
+      <p class="w3-text-grey">Rapeat ranskalaiset perunat</p>
+      <hr>
+   
+      <h1><b>Onion Rings</b> <span class="w3-right w3-tag w3-dark-grey w3-round">€6.00</span></h1>
+      <p class="w3-text-grey">Kultaiset sipulirenkaat, tarjoillaan dipin kanssa</p>
+      <hr>
+      
+      <h1><b>Coleslaw</b> <span class="w3-right w3-tag w3-dark-grey w3-round">€4.50</span></h1>
+      <p class="w3-text-grey">Klassinen coleslaw-salaatti</p>
+      <hr>
+
+      <h1><b>Pickles</b> <span class="w3-right w3-tag w3-dark-grey w3-round">€3.00</span></h1>
+      <p class="w3-text-grey">Hapankurkut</p>
+    </div>
+
+    <div id="Desserts" class="w3-container menu w3-padding-32 w3-white">
+      <h1><b>Chocolate Brownie</b> <span class="w3-tag w3-grey w3-round">Suosittu</span><span class="w3-right w3-tag w3-dark-grey w3-round">€7.00</span></h1>
+      <p class="w3-text-grey">Suklainen brownie, tarjoillaan vaniljajäätelön kanssa</p>
+      <hr>
+   
+      <h1><b>Cheesecake</b> <span class="w3-right w3-tag w3-dark-grey w3-round">€6.50</span></h1>
+      <p class="w3-text-grey">Herkullinen juustokakku, marjakastike</p>
+      <hr>
+      
+      <h1><b>Apple Pie</b> <span class="w3-right w3-tag w3-dark-grey w3-round">€5.50</span></h1>
+      <p class="w3-text-grey">Klassinen omenapiirakka, tarjoillaan kermavaahdon kanssa</p>
+    </div><br>
+
+  </div>
+</div>
+
+<!-- About Container -->
+<div class="w3-container w3-padding-64 w3-red w3-grayscale w3-xlarge" id="about">
+  <div class="w3-content">
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">Tietoa</h1>
+    <p>Turo's Burger perustettiin vuonna 2024 ja tarjoaa ainutlaatuisen makuelämyksen Burgereiden ystäville. Missiomme on tarjota korkealaatuisia hampurilaisia, jotka valmistetaan tuoreista ja paikallisista raaka-aineista.</p>
+    <p><strong>Kokki?</strong> Turo itse<img src="/w3images/chef.jpg" style="width:150px" class="w3-circle w3-right" alt="Chef"></p>
+    <p>Olemme ylpeitä sisustuksestamme.</p>
+    <img src="/w3images/onepage_restaurant.jpg" style="width:100%" class="w3-margin-top w3-margin-bottom" alt="Restaurant">
+    <h1><b>Aukioloajat</b></h1>
+    
+    <div class="w3-row">
+      <div class="w3-col s6">
+        <p>Ma & Ti KIINNI</p>
+        <p>Ke 10.00 - 22.00</p>
+        <p>To 10:00 - 22:00</p>
+      </div>
+      <div class="w3-col s6">
+        <p>Pe 10:00 - 22:00</p>
+        <p>La 10:00 - 23:00</p>
+        <p>Su Kiinni</p>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+<!-- Image of location/map -->
+<img src="/w3images/map.jpg" class="w3-image w3-greyscale" style="width:100%;" id="myMap">
+
+<!-- Contact -->
+<div class="w3-container w3-padding-64 w3-blue-grey w3-grayscale-min w3-xlarge">
+  <div class="w3-content">
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">Yhteydenotot</h1>
+    <p>Meidät löydät osoitteesta Esimerkki 123, Helsinki tai soita meille numeroon 05050515-122330</p>
+    <p><span class="w3-tag">FYI!</span> Tarjoamme täyden palvelun cateringia kaikenlaisiin tapahtumiin. Ymmärrämme tarpeesi ja räätälöimme ruoan täyttämään kaikki vaatimukset, niin ulkonäön kuin maun osalta.</p>
+    <p class="w3-xxlarge"><strong>Varaa</strong> pöytä, kysy päivän erikoisuudesta tai lähetä meille viesti:</p>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nimi" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="Kuinka monta henkilöä" required name="People"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Päivämäärä ja aika" required name="date" value="2020-11-16T20:00"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Viesti \ Erityisvaatimukset" required name="Message"></p>
+      <p><button class="w3-button w3-light-grey w3-block" type="submit">LÄHETÄ VIESTI</button></p>
+    </form>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-48 w3-xxlarge">
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-red";
+}
+document.getElementById("myLink").click();
+</script>
+
+</body>
+</html>

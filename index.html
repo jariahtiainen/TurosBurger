@@ -16,6 +16,99 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
   background-image: url(kuva.jpeg);
   min-height: 90%;
 }
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 24px; /* Adjusted size */
+  transition: 0.6s ease;
+  border-radius: 3px;
+  background-color: rgba(0,0,0,0.5); /* Slightly transparent */
+  text-shadow: 0px 0px 3px rgba(0,0,0,0.8); /* Adds a subtle shadow */
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px;
+}
+
+/* On hover, change background color */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #fff;
+  font-size: 18px; /* Adjusted size */
+  padding: 8px 16px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(0,0,0,0.5); /* Background for readability */
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #fff;
+  font-size: 14px; /* Adjusted size */
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  background-color: rgba(0,0,0,0.5); /* Background for readability */
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: 0.4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 768px) {
+  .prev, .next, .text {font-size: 14px}
+}
+
+@media only screen and (max-width: 480px) {
+  .prev, .next, .text {font-size: 12px}
+}
 </style>
 </head>
 <body>
@@ -52,7 +145,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
         <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Burgerit</div>
       </a>
       <a href="javascript:void(0)" onclick="openMenu(event, 'Sides');">
-        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Sivut</div>
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Lisukkeet</div>
       </a>
       <a href="javascript:void(0)" onclick="openMenu(event, 'Desserts');">
         <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Jälkiruoat</div>
@@ -117,10 +210,10 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
 <div class="w3-container w3-padding-64 w3-red w3-grayscale w3-xlarge" id="about">
   <div class="w3-content">
     <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">Tietoa</h1>
-    <p>Turo's Burger perustettiin vuonna 2024 ja tarjoaa ainutlaatuisen makuelämyksen Burgereiden ystäville. Missiomme on tarjota korkealaatuisia hampurilaisia, jotka valmistetaan tuoreista ja paikallisista raaka-aineista.</p>
-    <p><strong>Kokki?</strong> Turo itse<img src="/w3images/chef.jpg" style="width:150px" class="w3-circle w3-right" alt="Chef"></p>
+    <p>Turo's Burger perustettiin vuonna 2000 ja tarjoaa ainutlaatuisen makuelämyksen Burgereiden ystäville. Missiomme on tarjota korkealaatuisia hampurilaisia, jotka valmistetaan tuoreista ja paikallisista raaka-aineista.</p>
+    <p><strong>Kokki?</strong> Turo itse<img src=turothechef.jpeg style="width:150px" class="w3-circle w3-right" alt="Chef"></p>
     <p>Olemme ylpeitä sisustuksestamme.</p>
-    <img src="/w3images/onepage_restaurant.jpg" style="width:100%" class="w3-margin-top w3-margin-bottom" alt="Restaurant">
+    <img src=interior.jpg style="width:100%" class="w3-margin-top w3-margin-bottom" alt="Restaurant">
     <h1><b>Aukioloajat</b></h1>
     
     <div class="w3-row">
@@ -140,13 +233,76 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
 </div>
 
 <!-- Image of location/map -->
-<img src="/w3images/map.jpg" class="w3-image w3-greyscale" style="width:100%;" id="myMap">
+<div class="slideshow-container">
+
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src=turosrestaurant1.png style="width:100%">
+    <div class="text">Turo’s Burger - Hervanta - Eläväisessä Hervannan kaupunginosassa sijaitseva ravintola tarjoaa kodikkaan tunnelman ja monenlaisia hampurilaisia paikallisille ja opiskelijoille.</div>
+  </div>
+  
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src=turosrestaurant2.jpg style="width:100%">
+    <div class="text">Turo’s Burger - Keskustori - Sijaitsee Tampereen sydämessä, tämä ravintola on täydellinen paikka nauttia herkullinen hampurilainen kaupungin keskustaa tutkiessasi.</div>
+  </div>
+  
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src=turosrestaurant3.jpg style="width:100%">
+    <div class="text">Turo’s Burger - Lielahti - Vilkkaassa Lielahden alueella sijaitseva ravintola tarjoaa tilavan ruokailualueen ja valikoiman herkullisia hampurilaisia ja lisukkeita.</div>
+  </div>
+  
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+  
+  </div>
+  <br>
+  
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+  </div>
+  
+  <script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+  }
+  </script>
 
 <!-- Contact -->
-<div class="w3-container w3-padding-64 w3-blue-grey w3-grayscale-min w3-xlarge">
+<div class="w3-container w3-padding-64 w3-blue-grey w3-grayscale-min w3-xlarge" id="myMap">
   <div class="w3-content">
     <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">Yhteydenotot</h1>
-    <p>Meidät löydät osoitteesta Esimerkki 123, Helsinki tai soita meille numeroon 05050515-122330</p>
+    <p>Meidät löydät osoitteista:<br>
+      Turo’s Burger - Keskustori - Keskustori 5, 33100 Tampere, Finland<br>
+      Turo’s Burger - Hervanta   - Hervannan Puistotie 17, 33720 Tampere, Finland<br>
+      Turo’s Burger - Lielahti   - Lielahtikatu 21, 33400 Tampere, Finland<br>
+      tai soita meille numeroon 05050515-122330</p>
     <p><span class="w3-tag">FYI!</span> Tarjoamme täyden palvelun cateringia kaikenlaisiin tapahtumiin. Ymmärrämme tarpeesi ja räätälöimme ruoan täyttämään kaikki vaatimukset, niin ulkonäön kuin maun osalta.</p>
     <p class="w3-xxlarge"><strong>Varaa</strong> pöytä, kysy päivän erikoisuudesta tai lähetä meille viesti:</p>
     <form action="/action_page.php" target="_blank">
@@ -161,7 +317,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
 
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-48 w3-xxlarge">
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+  <p>Powered by <a href="#" title="Kurpitsa Solutions" target="_blank" class="w3-hover-text-green">Kurpitsa Solutions</a></p>
 </footer>
 
 <script>

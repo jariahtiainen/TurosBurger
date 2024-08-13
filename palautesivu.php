@@ -114,7 +114,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
 <body>
     <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-48 w3-xxlarge">
-  <p>Powered by <a href="testi.html" title="Kurpitsa Solutions" target="_blank" class="w3-hover-text-green">Kurpitsa Solutions</a></p>
+  <p>Powered by <a href="index.html" title="Kurpitsa Solutions" target="_blank" class="w3-hover-text-green">Kurpitsa Solutions</a></p>
 </footer>
 </body>
 </html>
